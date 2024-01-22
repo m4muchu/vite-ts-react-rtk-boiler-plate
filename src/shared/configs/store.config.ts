@@ -3,9 +3,12 @@ import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import configs from "./index";
 import toggleFlags from "@/shared/constants/toggle.flags";
+import AuthSliceReducer from "@/modules/auth/auth.data";
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    auth: AuthSliceReducer,
+  },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware({ thunk: true }).concat([]);
   },
