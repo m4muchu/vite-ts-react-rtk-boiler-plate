@@ -1,7 +1,6 @@
 import React from "react";
 /* ***package imports above this***  */
 
-import __Name__Template from "./__name__.template";
 /* ***components imports above this***  */
 
 /* ***libs, utils, custom-hooks imports above this***  */
@@ -13,14 +12,16 @@ import __Name__Template from "./__name__.template";
 /* ***enums, consts imports above this***  */
 
 /* ***types imports above this***  */
-import GlobalClasses from "@/shared/css/layout.module.css";
+
 /* ***style and styled components imports above this***  */
 
-interface I__Name__PageProps {}
+interface IAppLayoutOrganismProps {
+  children: React.ReactNode;
+}
 
 /* ***local declarations above this***  */
 
-export default function __Name__Page(props: I__Name__PageProps) {
+export default function AppLayoutOrganism(props: IAppLayoutOrganismProps) {
   /* ***props decustructions above this***  */
 
   /* ***data selectors above this***  */
@@ -39,11 +40,7 @@ export default function __Name__Page(props: I__Name__PageProps) {
 
   /* ***conditional renderings above this***  */
 
-  return (
-    <div className={GlobalClasses["Page-container"]}>
-      <__Name__Template />
-    </div>
-  );
+  return <div style={{ height: "100vh" }}>{props.children}</div>;
 }
 
-__Name__Page.defaultProps = {};
+AppLayoutOrganism.defaultProps = {};

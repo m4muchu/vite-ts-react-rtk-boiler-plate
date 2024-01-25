@@ -1,8 +1,8 @@
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 /* ***package imports above this***  */
 
-import AppLayout from "@/modules/shared/components/antd/organisms/layout-v2";
+import AppLayoutOrganism from "@/shared/components/antd/organisms/app-layout/app-layout.organism";
 import ProtectedRoute from "@/modules/shared/components/antd/organisms/protected-route";
 /* ***components imports above this***  */
 
@@ -24,7 +24,7 @@ interface I__Name__RoutesProps {}
 
 export default function __Name__Routes(props: I__Name__RoutesProps) {
   return (
-    <AppLayout>
+    <AppLayoutOrganism>
       {/* <Switch>
         <ProtectedRoute
           key={""}
@@ -33,7 +33,14 @@ export default function __Name__Routes(props: I__Name__RoutesProps) {
           exact
         />
       </Switch> */}
-    </AppLayout>
+      {/* <Routes>
+      <Route
+        key={FlowRouteObject.linkKey}
+        path={FlowRouteObject.routePath}
+        element={<div>Admin flow</div>}
+      />
+    </Routes> */}
+    </AppLayoutOrganism>
   );
 }
 
