@@ -10,6 +10,7 @@ import { useAppDispatch } from "@/shared/configs/store.config";
 
 // import { fetchUserDetails } from "@/auth/auth.data";
 import UnmatchedRouteHandler from "../unmatched-route-handler";
+import Test from "./test";
 /* ***data(redux) imports above this***  */
 
 /* ***configs imports above this***  */
@@ -33,7 +34,7 @@ export default function AppRoutesOrganism(props: IAppRoutesOrganismProps) {
 
   return (
     <Routes>
-      <Route key={"key"} path={"/test"} element={<div>test</div>} />
+      <Route key={"key"} path={"/test"} Component={Test} />
       {/* <Route
         key={"unmatched-router-handler"}
         path="*"
